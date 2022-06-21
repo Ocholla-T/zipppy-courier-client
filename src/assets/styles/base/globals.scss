@@ -1,0 +1,31 @@
+@use '../utils';
+
+*,
+*::after,
+*::before {
+  font-family: utils.$font-family;
+}
+
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-fd-c {
+    flex-direction: column;
+  }
+}
+
+.grid {
+  display: grid;
+
+  &-ai-c {
+    align-items: center;
+  }
+}
