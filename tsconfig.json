@@ -10,7 +10,10 @@
     "moduleResolution": "node",
     "paths": {
       "@components/*": ["components/*"],
-      "@styles/*": ["assets/styles/*"]
+      "@styles/*": ["assets/styles/*"],
+      "@store/*": ["store/*"],
+      "@ui/*": ["components/ui/*"],
+      "@pages/*": ["components/ui/pages/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
