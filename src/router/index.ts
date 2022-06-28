@@ -8,7 +8,13 @@ const routes: RouteRecordRaw[] = [
   {
     component: lazyImport('Signup'),
     alias: '/',
+    name: 'signup',
     path: '/auth/signup',
+  },
+  {
+    component: lazyImport('Login'),
+    name: 'login',
+    path: '/auth/login',
   },
 ]
 
