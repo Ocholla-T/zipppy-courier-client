@@ -13,7 +13,8 @@
       "@styles/*": ["assets/styles/*"],
       "@store/*": ["store/*"],
       "@ui/*": ["components/ui/*"],
-      "@pages/*": ["components/ui/pages/*"]
+      "@pages/*": ["components/ui/pages/*"],
+      "@services/*": ["services/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
