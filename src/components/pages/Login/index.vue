@@ -3,10 +3,17 @@ import CustomInput from '@ui/Input/index.vue'
 import CustomButton from '@ui/Button/index.vue'
 import { User } from 'models/User'
 import { ref } from 'vue'
+import { Router, useRouter } from 'vue-router'
 
 const user: User = {
   email: ref(''),
   password: ref(''),
+}
+
+const router: Router = useRouter()
+
+function goToSignupPage() {
+  router.push('/auth/signup')
 }
 </script>
 
@@ -33,6 +40,7 @@ const user: User = {
           input-id="password"
           placeholder="Enter your password"
           type="password"
+          autocomplete="current-password"
           v-model="user.password.value"
         />
       </div>
@@ -43,6 +51,15 @@ const user: User = {
         width="100%"
         color="#FFFFFF"
         background="#57cc99"
+      />
+      <custom-button
+        class="card__button"
+        button-value="Don't have an Account, Signup"
+        button-type="button"
+        width="100%"
+        color="#57cc99"
+        background="#FFFFFF"
+        @click="goToSignupPage"
       />
     </form>
   </main>
