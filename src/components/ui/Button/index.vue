@@ -7,6 +7,8 @@ defineProps<{
   color?: string
   background?: string
 }>()
+
+defineEmits(['click'])
 </script>
 
 <template>
@@ -17,6 +19,7 @@ defineProps<{
     :type="buttonType"
     :value="buttonValue"
     :style="{ width, color, background }"
+    @click="$emit('click', $event)"
   />
 </template>
 
