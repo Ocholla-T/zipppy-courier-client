@@ -1,0 +1,26 @@
+.alert {
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+  border-radius: 7px;
+  color: #664d03;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+
+  &__icon {
+    cursor: pointer;
+    filter: invert(23%) sepia(99%) saturate(874%) hue-rotate(24deg) brightness(97%) contrast(98%);
+    width: 22px;
+  }
+}
+
+.success {
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+}
