@@ -2,7 +2,6 @@ import axios from 'axios'
 import { defineStore } from 'pinia'
 import { User } from 'models/User'
 import { Ref } from 'vue'
-import { AuthService } from '@services/auth'
 
 export const useRegister = defineStore('register', {
   actions: {
@@ -19,10 +18,18 @@ export const useRegister = defineStore('register', {
           password: user.password.value,
           confirmPassword: (user.confirmPassword as Ref<string>).value,
         })
-        .then(async (response) => {
-          console.log('user created successfully')
-        })
         .catch((error) => {
+          /*
+           *------------------------------------
+           * ERROR RESPONSE
+           * -----------------------------------
+           * Error response is in the form:
+           *
+           * {
+           *  success: boolean,
+           *  errors: Array
+           * }
+           */
           throw error.response.data
         })
     },
