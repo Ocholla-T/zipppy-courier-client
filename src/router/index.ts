@@ -16,6 +16,11 @@ const routes: RouteRecordRaw[] = [
     name: 'login',
     path: '/auth/login',
   },
+  {
+    component: lazyImport('Home'),
+    name: 'home',
+    path: '/dashboard',
+  },
 ]
 
 export default createRouter({
